@@ -1,5 +1,5 @@
 {% set name = "maup" %}
-{% set version = "0.7" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a8e45c71af8263ef7039fb747bfe9706cf4e6b1fc3393d21284416b426974cb1
+  sha256: f0db58102dbe16996333f078c8d38b904b735ab7cb033434927c45879fdbdaa1
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'The geospatial toolkit for redistricting data'
+  summary: The geospatial toolkit for redistricting data
 
   description: |
     maup is the geospatial toolkit for redistricting data. The package streamlines
